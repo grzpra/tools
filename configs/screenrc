@@ -1,0 +1,35 @@
+startup_message off
+defscrollback 30000
+vbell off
+shell bash
+altscreen on
+autodetach on
+
+# F4: next window
+# F3: prev window
+bindkey -k k3 prev
+bindkey -k k4 next
+
+bindkey -k k6 split -v
+bindkey -k k7 only
+bindkey -k k8 focus
+
+bindkey -k k9 detach
+bindkey -k k; title
+bindkey -k F1 screen
+bindkey -k F2 lockscreen
+
+caption splitonly
+
+# Show 'task bar' on last line
+hardstatus on
+hardstatus alwayslastline
+hardstatus string '%{= kG}[ %{kd}%H%{kG} ][ %L=%=%{kd}%-w%L>%{kG}[%{kd}%n %t%{kG}]%{kd}%+w %=%-024=%{kG}][ %{kd}%d-%m-%Y %c:%s%{kG} ]%{= dd}'
+
+attrcolor b ".I"
+termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+defbce on
+
+# Default setup
+chdir $HOME
+screen -t home 0 bash

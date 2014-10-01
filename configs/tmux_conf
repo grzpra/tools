@@ -1,0 +1,64 @@
+# switch to C-a instead of C-b
+unbind C-b
+set -g prefix C-a
+bind C-a send-prefix
+
+# use UTF-8
+set -g utf8
+set-window-option -g utf8 on
+
+# increase history limit
+set -g history-limit 20000
+
+# looks
+set -g status-justify centre
+
+set -g status-left "#[fg=green][ #[fg=default]#H#[fg=green] ]["
+set -g status-left-length 50
+set -g status-left-bg default
+set -g status-left-fg white
+
+set -g status-right "#[fg=green]][ #[fg=default]%d-%m-%Y %H:%M:%S #[fg=green]]"
+set -g status-right-length 50
+set -g status-right-bg default
+set -g status-right-fg white
+
+set -g status-bg default
+set -g status-fg white
+set -g pane-border-bg colour235
+set -g pane-border-fg white
+set -g pane-active-border-bg colour235
+set -g pane-active-border-fg green
+
+set -g message-bg green
+set -g message-fg default
+
+set-window-option -g window-status-fg white
+set-window-option -g window-status-bg default
+set-window-option -g window-status-format "#I #W"
+set-window-option -g window-status-current-bg default
+set-window-option -g window-status-current-fg white
+set-window-option -g window-status-current-format "#[fg=green][#[fg=white]#I #W#[fg=green]]"
+
+# mouse
+set -g mouse-select-window on
+set -g mouse-select-pane on
+set -g mouse-resize-pane on
+
+# other stuff
+set -g base-index 1
+set -g bell-action none
+set -g bell-on-alert off
+set -g status-interval 1
+
+# binds
+# reload conf file on Shift+R
+bind R source-file ~/.tmux.conf \; display-message "Config reloaded..."
+bind -n F3 previous-window
+bind -n F4 next-window
+bind -n F7 kill-pane
+bind -n F8 kill-window
+bind -n F9 detach
+bind -n F10 new-window
+bind -n F12 split-window
+bind -n F11 split-window -h

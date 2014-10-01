@@ -1,0 +1,36 @@
+highlight ExtraWhitespace ctermbg=darkcyan guibg=darkcyan
+au ColorScheme * highlight ExtraWhitespace ctermbg=darkcyan guibg=darkcyan
+
+syntax on
+au Syntax * syn match ExtraWhitespace /\s\+$\| \+\ze\t/
+
+set background=dark
+colorscheme wombat256
+set backspace=indent,eol,start
+set ruler
+set ch=2
+map <S-Insert> <MiddleMouse>
+map! <S-Insert> <MiddleMouse>
+set incsearch
+set hlsearch
+set nobackup
+set number
+set novisualbell
+
+" Bind F5 to change between wrap on/off
+map <F5> :set wrap!<CR>
+
+" Enable mouse
+set mouse=a
+
+" Enable 256 colors
+set t_Co=256
+
+" Autofill options
+set wildmenu
+set wildmode=list:longest
+
+" Printer settings
+set pdev=B01-347-01
+set popt=paper:A4,syntax:y,wrap:y,number:y,left:10pt,right:10pt,top:20pt,bottom:10pt,
+set pfn=Courier_New:h8:cANSI
