@@ -12,7 +12,7 @@ UARCH=sandbox
 KMOD_DIR=kmod
 
 .DEFAULT: help
-.PHONY: help all clean purge $(KDIR) $(UDIR)
+.PHONY: help all clean purge $(KDIR) $(UDIR) $(KMOD_DIR)
 
 help:
 	@echo "Supported targets:"
@@ -23,7 +23,8 @@ help:
 	@echo " $(UDIR)\t- builds u-boot"
 	@echo " $(KMOD_DIR)\t- builds kernel module template"
 
-all: $(KDIR) $(UDIR) $(KMOD_DIR)
+all: $(KDIR) $(UDIR)
+	@$(MAKE) $(KMOD_DIR)
 
 $(KDIR)/.config:
 	@$(MAKE) -C $(KDIR) ARCH=$(KARCH) CROSS_COMPILE=$(CROSS_COMPILE) $(KDEFCONFIG)
@@ -39,8 +40,8 @@ $(UDIR)/.config:
 $(UDIR): $(UDIR)/.config
 	@$(MAKE) -C $(UDIR) ARCH=$(UARCH) CROSS_COMPILE=$(CROSS_COMPILE)
 
-$(KMOD_DIR): $(KDIR)
-	@$(MAKE) -C $(KMOD_DIR) ARCH=$(KARCH) CROSS_COMPILE=$(CROSS_COMPILE) KDIR=$(CURDIR)/$(KDIR) clean
+$(KMOD_DIR):
+	@$(MAKE) -C $(KMOD_DIR) ARCH=$(KARCH) CROSS_COMPILE=$(CROSS_COMPILE) KDIR=$(CURDIR)/$(KDIR) all
 
 clean:
 	@$(MAKE) -C $(KMOD_DIR) ARCH=$(KARCH) CROSS_COMPILE=$(CROSS_COMPILE) KDIR=$(CURDIR)/$(KDIR) clean
