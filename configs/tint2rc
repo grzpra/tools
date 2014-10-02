@@ -73,6 +73,17 @@ systray_icon_size = 22
 systray_icon_asb = 100 0 0
 systray_icon_theme = Faenza-Dark
 
+# Battery
+battery = 1
+battery_low_status = 20
+battery_low_cmd = notify-send "battery low"
+battery_hide = 96
+bat1_font = Trebuchet MS  9
+bat2_font = Trebuchet MS  9
+battery_font_color = #FFFFFF 80
+battery_padding = 2 0
+battery_background_id = 0
+
 # Clock
 time1_format = %H:%M
 time1_font =  Trebuchet MS  9
@@ -99,16 +110,5 @@ mouse_middle = none
 mouse_right = close
 mouse_scroll_up = toggle
 mouse_scroll_down = iconify
-
-# Battery
-battery = 1
-battery_low_status = 20
-battery_low_cmd = notify-send "battery low"
-battery_hide = 96
-bat1_font = Trebuchet MS  9
-bat2_font = Trebuchet MS  9
-battery_font_color = #FFFFFF 80
-battery_padding = 2 0
-battery_background_id = 0
 
 # End of config
