@@ -29,6 +29,7 @@ hardstatus string '%{= kG}[ %{kd}%H%{kG} ][ %L=%=%{kd}%-w%L>%{kG}[%{kd}%n %t%{kG
 attrcolor b ".I"
 termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
 defbce on
+term "screen-256color"
 
 # Default setup
 chdir $HOME

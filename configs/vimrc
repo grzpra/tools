@@ -23,9 +23,6 @@ map <F5> :set wrap!<CR>
 " Enable mouse
 set mouse=a
 
-" Enable 256 colors
-set t_Co=256
-
 " Autofill options
 set wildmenu
 set wildmode=list:longest
