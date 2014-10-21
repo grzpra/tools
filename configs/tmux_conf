@@ -8,7 +8,7 @@ set -g utf8
 set-window-option -g utf8 on
 
 # set 256-color terminal
-set -g default-terminal "screen-256color-bce"
+set -g default-terminal "screen-256color"
 
 # increase history limit
 set -g history-limit 20000
