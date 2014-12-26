@@ -71,7 +71,6 @@ systray_sort = left2right
 systray_background_id = 0
 systray_icon_size = 22
 systray_icon_asb = 100 0 0
-systray_icon_theme = Faenza-Dark
 
 # Battery
 battery = 1
