@@ -26,3 +26,9 @@ set mouse=a
 " Autofill options
 set wildmenu
 set wildmode=list:longest
+
+if has("win32")
+	set guifont=Consolas:h12
+	set encoding=utf-8
+	set fileencoding=utf-8
+endif
