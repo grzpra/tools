@@ -15,7 +15,7 @@ echo "* checking IOPS:"
 if ! $(which ioping > /dev/null); then
 	sudo apt-get install ioping
 fi
-ioping -c 10 $HOME
+ioping -c 10 /
 
 # Run HDparm
 echo "* running hdparm tests"
