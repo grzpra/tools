@@ -5,17 +5,17 @@ if [ "$(whoami)" != "root" ]; then
 	exit 1
 fi
 
-# Check sequential transfer rates
-echo "* checking transfer rates:"
-dd if=/dev/zero of=/iotest bs=64k count=16k conv=fdatasync
-rm -rf /iotest
-
 # Check IOPS
 echo "* checking IOPS:"
 if ! $(which ioping > /dev/null); then
 	sudo apt-get install ioping
 fi
 ioping -c 10 /
+
+# Check sequential transfer rates
+echo "* checking transfer rates:"
+dd if=/dev/zero of=/iotest bs=64k count=16k conv=fdatasync
+rm -rf /iotest
 
 # Run HDparm
 echo "* running hdparm tests"
