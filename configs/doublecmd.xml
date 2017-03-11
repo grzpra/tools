@@ -1,4 +1,4 @@
-<doublecmd DCVersion="0.7.3 beta" ConfigVersion="9">
+<doublecmd DCVersion="0.7.8 beta" ConfigVersion="9">
   <Toolbars>
     <MainToolbar>
       <Row>
@@ -149,7 +149,7 @@
       <KeepTerminalOpen>False</KeepTerminalOpen>
     </Viewer>
     <Editor Enabled="True">
-      <Path>gvim.exe</Path>
+      <Path>C:\Program Files (x86)\Vim\vim74\gvim.exe</Path>
       <Parameters/>
       <RunInTerminal>False</RunInTerminal>
       <KeepTerminalOpen>False</KeepTerminalOpen>
@@ -328,7 +328,9 @@
       <CopyTime>True</CopyTime>
       <CopyOwnership>False</CopyOwnership>
       <CopyPermissions>False</CopyPermissions>
+      <ExcludeEmptyTemplateDirectories>True</ExcludeEmptyTemplateDirectories>
     </Options>
+    <AutoExtractOpenMask/>
   </FileOperations>
   <History>
     <SearchReplaceHistory Save="True"/>
@@ -439,7 +441,7 @@
     <PathToLibrary>lua5.1.dll</PathToLibrary>
   </Lua>
   <NameShortcutFile>shortcuts.scf</NameShortcutFile>
-  <LastUsedPacker>zip</LastUsedPacker>
+  <LastUsedPacker>7z</LastUsedPacker>
   <UseShellForFileOperations>True</UseShellForFileOperations>
   <LastDoAnyCommand>cm_Refresh</LastDoAnyCommand>
   <SearchTemplates/>
@@ -877,4 +879,8 @@
     </WfxPlugins>
     <WlxPlugins/>
   </Plugins>
+  <MultiRenamePresets>
+    <LastPreset/>
+    <Presets/>
+  </MultiRenamePresets>
 </doublecmd>
