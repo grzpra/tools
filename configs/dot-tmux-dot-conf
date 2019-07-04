@@ -3,10 +3,6 @@ unbind C-b
 set -g prefix C-a
 bind C-a send-prefix
 
-# use UTF-8
-set -g utf8
-set-window-option -g utf8 on
-
 # set 256-color terminal
 set -g default-terminal "screen-256color"
 
@@ -46,9 +42,7 @@ set-window-option -g window-status-current-fg default
 set-window-option -g window-status-current-format "#[fg=green,bold][#[fg=default,nobold]#I #W#[fg=green,bold]]"
 
 # mouse
-set -g mouse-select-window on
-set -g mouse-select-pane on
-set -g mouse-resize-pane on
+set -g mouse on
 
 # other stuff
 set -g base-index 1
