@@ -28,14 +28,11 @@ PS2="\[\e[1;32m\]>\[\e[0m\] "
 
 # enable color support of ls and also add handy aliases
 alias ls='ls --color=auto'
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
+alias grep='grep --color=auto --binary-files=without-match --color=auto --devices=skip --exclude-dir=CVS --exclude-dir=.libs --exclude-dir=.deps --exclude-dir=.svn'
 
 # some more ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
-export GREP_OPTIONS="--binary-files=without-match --color=auto --devices=skip --exclude-dir=CVS --exclude-dir=.libs --exclude-dir=.deps --exclude-dir=.svn"
 export SVN_EDITOR=vim
