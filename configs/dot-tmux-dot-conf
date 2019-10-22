@@ -47,7 +47,6 @@ set -g mouse on
 # other stuff
 set -g base-index 1
 set -g bell-action none
-set -g bell-on-alert off
 set -g status-interval 1
 
 # binds
